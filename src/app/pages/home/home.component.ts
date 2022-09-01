@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
+  constructor(private fb: FormBuilder) {}
 
-  constructor() { }
+  form = this.fb.group({
+    search_pokemon: ['', Validators.required],
+  });
 
-  ngOnInit(): void {
+  onSubmit(input: HTMLInputElement) {
+    if (this.form.valid) {
+      console.log(this.form.value);
+      this.form.reset();
+      input.focus();
+    } else {
+      return;
+    }
   }
-
 }

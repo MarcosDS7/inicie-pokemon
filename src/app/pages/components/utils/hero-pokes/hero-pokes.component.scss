@@ -1,0 +1,47 @@
+.home__hero_images--config {
+  img {
+    width: 35%;
+
+    &#togepi {
+     animation: poke_one 6s ease-in-out infinite;
+    }
+
+    &#pikachu {
+     animation: poke_two 6s ease-in-out infinite;
+    }
+
+    &#bulbasaur {
+     animation: poke_three 4s ease-in-out infinite;
+    }
+}
+
+  @keyframes poke_one {
+    0%, 100% {
+      transform: translateY(0)
+    }
+
+    50% {
+      transform: translateY(-1.25rem) scale(1.1);
+    }
+  }
+
+  @keyframes poke_two {
+    0%, 100% {
+      transform: translateY(0)
+    }
+
+    50% {
+      transform: translateY(1.25rem) scale(0.9);
+    }
+  }
+
+  @keyframes poke_three {
+    0%, 100% {
+      transform: translateY(0)
+    }
+
+    50% {
+      transform: translateY(-1.25rem) scale(1.1);
+    }
+  }
+}

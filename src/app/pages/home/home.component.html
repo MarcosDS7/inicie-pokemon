@@ -1,1 +1,31 @@
-<p>home works!</p>
+<section class="row row-cols-1 row-cols-md-2 g-0">
+  <div class="d-flex align-items-center order-1 order-md-0">
+    <div class="col-12 col-lg-9 col-xl-7">
+      <app-title
+        >Explore o mundo dos
+        <span class="text-danger">Pokémons</span></app-title
+      >
+      <p>Descubra todas as espécies de Pokémons</p>
+      <form
+        class="input-group"
+        [formGroup]="form"
+        (ngSubmit)="onSubmit(search_pokemon)"
+      >
+        <input
+          class="form-control bg-white border-0 fs-6"
+          id="search_pokemon"
+          type="text"
+          formControlName="search_pokemon"
+          required
+          #search_pokemon
+          autocomplete="off"
+          placeholder="Pesquise por nomes de pokémons..."
+        />
+        <button class="btn btn-danger" type="submit" [disabled]="form.invalid">
+          Buscar
+        </button>
+      </form>
+    </div>
+  </div>
+  <app-hero-pokes></app-hero-pokes>
+</section>

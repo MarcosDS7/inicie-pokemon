@@ -4,10 +4,6 @@
 
 export const environment = {
   production: false,
-
-  api: {
-    base: 'https://pokeapi.co/api/v2/pokemon',
-  },
 };
 
 /*

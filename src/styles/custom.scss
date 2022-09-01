@@ -1,0 +1,22 @@
+// Global project structure settings
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: $font-family-sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: .375rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba($color: $primary, $alpha: 0.3);
+  border-radius: 1.25rem;
+}

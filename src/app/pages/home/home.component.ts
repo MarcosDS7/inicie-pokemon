@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Pokemon } from './../../models/pokemons.model';
+import { pokemonList } from './../../mocks/pokemons.mock';
+import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -6,20 +8,14 @@ import { FormBuilder, Validators } from '@angular/forms';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
+  listPokemons: Pokemon[] = pokemonList;
+
   constructor(private fb: FormBuilder) {}
 
   form = this.fb.group({
     search_pokemon: ['', Validators.required],
   });
-
-  ngOnInit(): void {
-    this.returnPokemonsList();
-  }
-
-  returnPokemonsList(): void {
-    console.log('Eita glória');
-  }
 
   onSubmit(input: HTMLInputElement) {
     if (this.form.valid) {

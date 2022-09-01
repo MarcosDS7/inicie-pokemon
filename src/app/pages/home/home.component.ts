@@ -1,5 +1,3 @@
-import { PokemonList } from './../models/pokemon.model';
-import { PokemonService } from './../../core/services/api/pokemon.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
@@ -9,12 +7,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  listPokemons: PokemonList[] = [];
-
-  constructor(
-    private fb: FormBuilder,
-    private pokemonService: PokemonService
-  ) {}
+  constructor(private fb: FormBuilder) {}
 
   form = this.fb.group({
     search_pokemon: ['', Validators.required],
@@ -25,15 +18,7 @@ export class HomeComponent implements OnInit {
   }
 
   returnPokemonsList(): void {
-    this.pokemonService.getPokemonsList(10).subscribe({
-      next: (respose) => {
-        this.listPokemons = respose.results;
-        console.log(respose);
-      },
-      error: (err) => {
-        console.log(err);
-      },
-    });
+    console.log('Eita glória');
   }
 
   onSubmit(input: HTMLInputElement) {

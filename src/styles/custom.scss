@@ -1,4 +1,7 @@
 // Global project structure settings
+@import "~swiper/swiper.min.css";
+@import "~swiper/css/navigation";
+
 html {
   scroll-behavior: smooth;
 }
@@ -24,3 +27,16 @@ body::-webkit-scrollbar-thumb {
 input::placeholder {
   color: #A79EB2 !important;
 }
+
+.swiper-button-next, .swiper-button-prev {
+  color: $white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: rgba($color: $red, $alpha: .8);
+
+  &::after {
+    font-size: 1rem !important;
+  }
+}
+

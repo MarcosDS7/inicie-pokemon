@@ -9,9 +9,26 @@ import { HeroPokesComponent } from './components/utils/hero-pokes/hero-pokes.com
 import { TitleComponent } from './components/elements/title/title.component';
 import { SubTitleComponent } from './components/elements/sub-title/sub-title.component';
 import { CardPokeComponent } from './components/utils/card-poke/card-poke.component';
+import { SliderMainComponent } from './components/utils/sliders/slider-main/slider-main.component';
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
-  declarations: [PagesComponent, HomeComponent, NavbarComponent, HeroPokesComponent, TitleComponent, SubTitleComponent, CardPokeComponent],
-  imports: [CommonModule, PagesRoutingModule, FormsModule, ReactiveFormsModule],
+  declarations: [
+    PagesComponent,
+    HomeComponent,
+    NavbarComponent,
+    HeroPokesComponent,
+    TitleComponent,
+    SubTitleComponent,
+    CardPokeComponent,
+    SliderMainComponent,
+  ],
+  imports: [
+    CommonModule,
+    PagesRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    SwiperModule,
+  ],
 })
 export class PagesModule {}

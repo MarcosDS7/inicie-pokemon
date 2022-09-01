@@ -1,15 +1,18 @@
-<li class="bg-white d-flex flex-column align-items-center rounded p-3">
-  <div class="d-flex align-items-center justify-content-between w-100">
+<div
+  class="bg-white d-flex flex-column align-items-center rounded p-3"
+  title="🤩 Pokémon {{ pokemon.name }}"
+>
+  <span class="d-flex align-items-center justify-content-between w-100">
     <p class="m-0 fw-bold">{{ pokemon.name }}</p>
     <small>#0{{ pokemon.cod }}</small>
-  </div>
-  <img [src]="pokemon.image" alt="" />
-  <div class="d-flex align-items-center justify-content-between w-100">
+  </span>
+  <img alt [src]="pokemon.image" />
+  <span class="d-flex align-items-center justify-content-between w-100">
     <small class="fw-bold">Altura:</small>
     <small>{{ pokemon.height }}cm</small>
-  </div>
-  <div class="d-flex align-items-center justify-content-between w-100">
+  </span>
+  <span class="d-flex align-items-center justify-content-between w-100">
     <small class="fw-bold">Peso:</small>
     <small>{{ pokemon.weight }}kg</small>
-  </div>
-</li>
+  </span>
+</div>

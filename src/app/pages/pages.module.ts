@@ -11,6 +11,7 @@ import { SubTitleComponent } from './components/elements/sub-title/sub-title.com
 import { CardPokeComponent } from './components/utils/card-poke/card-poke.component';
 import { SliderMainComponent } from './components/utils/sliders/slider-main/slider-main.component';
 import { SwiperModule } from 'swiper/angular';
+import { SliderComponent } from './components/utils/sliders/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SwiperModule } from 'swiper/angular';
     SubTitleComponent,
     CardPokeComponent,
     SliderMainComponent,
+    SliderComponent,
   ],
   imports: [
     CommonModule,

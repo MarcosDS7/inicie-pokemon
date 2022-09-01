@@ -1,6 +1,11 @@
 // Global project structure settings
 @import "~swiper/swiper.min.css";
+@import "~swiper/css/grid";
 @import "~swiper/css/navigation";
+
+.swiper-grid-column > .swiper-wrapper {
+  flex-direction: row !important;
+ }
 
 html {
   scroll-behavior: smooth;

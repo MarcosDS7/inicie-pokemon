@@ -1,0 +1,37 @@
+<swiper
+  class="mt-4"
+  [slidesPerView]="3"
+  [grid]="{
+    rows: 2,
+    fill: 'row'
+  }"
+  [spaceBetween]="10"
+  [grabCursor]="true"
+  [autoplay]="{
+    delay: 4000,
+    disableOnInteraction: false
+  }"
+  [navigation]="true"
+  [breakpoints]="{
+    '@0.00': {
+      slidesPerView: 1.2,
+      spaceBetween: 10
+    },
+    '@0.75': {
+      slidesPerView: 3,
+      spaceBetween: 10
+    },
+    '@1.00': {
+      slidesPerView: 4,
+      spaceBetween: 10
+    },
+    '@1.50': {
+      slidesPerView: 5,
+      spaceBetween: 10
+    }
+  }"
+>
+  <ng-template swiperSlide *ngFor="let itemPokemon of receiveList">
+    <app-card-poke [pokemon]="itemPokemon"></app-card-poke>
+  </ng-template>
+</swiper>

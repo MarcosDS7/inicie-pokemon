@@ -1,8 +1,23 @@
+@import './src/styles/_variables.scss';
+
 .sidebar__container--config {
   display: grid;
   grid-template-columns: 1fr 17.5rem;
   z-index: 999;
   transition: right ease-in-out .2s;
+
+  aside::-webkit-scrollbar {
+    width: .375rem;
+  }
+
+  aside::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  aside::-webkit-scrollbar-thumb {
+    background-color: rgba($color: $primary, $alpha: 0.1);
+    border-radius: 1.25rem;
+  }
 
   .sidebar__hero--container{
     height: 14.5rem;
@@ -11,6 +26,7 @@
       width: 55%;
       object-fit: contain;
     }
+
   }
 }
 
@@ -20,4 +36,19 @@
 
 .sidebar__container--off {
   right: -100%;
+}
+
+
+@media (min-width: 1400px) {
+  .sidebar__container--config {
+    grid-template-columns: 1fr 20rem;
+
+    .sidebar__hero--container{
+      height: 16.9375rem;
+
+      img {
+        width: 50%;
+      }
+    }
+  }
 }

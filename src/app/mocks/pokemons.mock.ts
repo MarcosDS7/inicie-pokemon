@@ -10,6 +10,7 @@ export const pokemonList: Pokemon[] = [
     height: 1.85,
     weight: 19,
     cod: 1,
+    data: [10, 45, 60, 35],
   },
   {
     name: 'Squirtle',
@@ -20,6 +21,7 @@ export const pokemonList: Pokemon[] = [
     height: 50,
     weight: 9,
     cod: 2,
+    data: [25, 80, 44, 56],
   },
   {
     name: 'Caterpie',
@@ -30,6 +32,7 @@ export const pokemonList: Pokemon[] = [
     height: 30,
     weight: 2.9,
     cod: 3,
+    data: [40, 30, 22, 15],
   },
   {
     name: 'Pikachu',
@@ -40,6 +43,7 @@ export const pokemonList: Pokemon[] = [
     height: 40,
     weight: 6,
     cod: 4,
+    data: [80, 60, 45, 90],
   },
   {
     name: 'Blastoise',
@@ -50,6 +54,7 @@ export const pokemonList: Pokemon[] = [
     height: 1.85,
     weight: 64,
     cod: 5,
+    data: [89, 46, 38, 47],
   },
   {
     name: 'Pidgeotto',
@@ -60,6 +65,7 @@ export const pokemonList: Pokemon[] = [
     height: 1.12,
     weight: 30,
     cod: 6,
+    data: [20, 47, 33, 55],
   },
   {
     name: 'Pidgeot',
@@ -70,6 +76,7 @@ export const pokemonList: Pokemon[] = [
     height: 1.59,
     weight: 39.4,
     cod: 7,
+    data: [20, 28, 40, 39],
   },
   {
     name: 'Rattata',
@@ -80,6 +87,7 @@ export const pokemonList: Pokemon[] = [
     height: 30,
     weight: 3.5,
     cod: 8,
+    data: [39, 45, 36, 49],
   },
   {
     name: 'Ekans',
@@ -90,6 +98,7 @@ export const pokemonList: Pokemon[] = [
     height: 201,
     weight: 6.9,
     cod: 9,
+    data: [47, 25, 31, 53],
   },
   {
     name: 'Arbok',
@@ -100,6 +109,7 @@ export const pokemonList: Pokemon[] = [
     height: 1.1,
     weight: 19,
     cod: 10,
+    data: [58, 36, 47, 79],
   },
   {
     name: 'Vulpix',
@@ -110,6 +120,7 @@ export const pokemonList: Pokemon[] = [
     height: 1.85,
     weight: 64,
     cod: 11,
+    data: [30, 45, 56, 66],
   },
   {
     name: 'Raichu',
@@ -120,6 +131,7 @@ export const pokemonList: Pokemon[] = [
     height: 80,
     weight: 30,
     cod: 12,
+    data: [67, 50, 49, 80],
   },
   {
     name: 'Paras',
@@ -130,6 +142,7 @@ export const pokemonList: Pokemon[] = [
     height: 1.83,
     weight: 64,
     cod: 13,
+    data: [20, 35, 46, 60],
   },
   {
     name: 'Venonat',
@@ -140,6 +153,7 @@ export const pokemonList: Pokemon[] = [
     height: 100,
     weight: 30,
     cod: 14,
+    data: [47, 42, 30, 64],
   },
   {
     name: 'Venomoth',
@@ -150,6 +164,7 @@ export const pokemonList: Pokemon[] = [
     height: 1.51,
     weight: 12,
     cod: 15,
+    data: [57, 52, 40, 74],
   },
   {
     name: 'Metagross',
@@ -160,5 +175,6 @@ export const pokemonList: Pokemon[] = [
     height: 2.34,
     weight: 70,
     cod: 16,
+    data: [99, 80, 78, 100],
   },
 ];

@@ -13,6 +13,8 @@ import { SliderMainComponent } from './components/utils/sliders/slider-main/slid
 import { SwiperModule } from 'swiper/angular';
 import { SliderComponent } from './components/utils/sliders/slider/slider.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { ChartPokeComponent } from './components/utils/chart-poke/chart-poke.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
     SliderMainComponent,
     SliderComponent,
     SidebarComponent,
+    ChartPokeComponent,
   ],
   imports: [
     CommonModule,
@@ -33,6 +36,7 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
     FormsModule,
     ReactiveFormsModule,
     SwiperModule,
+    NgApexchartsModule,
   ],
 })
 export class PagesModule {}

@@ -6,7 +6,7 @@
   }"
 >
   <div class="bg-transparent" (click)="changeSidebar()"></div>
-  <aside class="p-4 bg-white border-start border-light">
+  <aside class="p-4 bg-white border-start border-light vh-100 overflow-auto">
     <app-sub-title>{{ this.sidebarService.pokemon.name }}</app-sub-title>
     <div
       class="d-flex align-items-center justify-content-between flex-wrap fs-6"
@@ -27,7 +27,7 @@
       </div>
     </div>
     <div
-      class="p-2 border rounded-circle d-flex justify-content-center align-items-center sidebar__hero--container my-5"
+      class="p-2 border rounded-circle d-flex justify-content-center align-items-center sidebar__hero--container my-4"
     >
       <img
         title="🥳 Pokémon {{ this.sidebarService.pokemon.name }}"
@@ -35,7 +35,8 @@
         [src]="this.sidebarService.pokemon.image"
       />
     </div>
-    <article class="my-4">
+    <app-chart-poke [pokemon]="this.sidebarService.pokemon"></app-chart-poke>
+    <article class="mb-4">
       <p class="fw-bold mb-2">Informações</p>
       <div class="d-flex align-items-center justify-content-between">
         <span class="fw-medium">Altura:</span>

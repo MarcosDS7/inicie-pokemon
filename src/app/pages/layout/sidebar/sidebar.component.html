@@ -1,0 +1,58 @@
+<section
+  class="sidebar__container--config position-fixed w-100 top-0 min-vh-100"
+  [ngClass]="{
+    'sidebar__container--on': sidebarService.sidebar,
+    'sidebar__container--off': sidebarService.sidebar === false
+  }"
+>
+  <div class="bg-transparent" (click)="changeSidebar()"></div>
+  <aside class="p-4 bg-white border-start border-light">
+    <app-sub-title>{{ this.sidebarService.pokemon.name }}</app-sub-title>
+    <div
+      class="d-flex align-items-center justify-content-between flex-wrap fs-6"
+    >
+      <div class="d-flex align-items-center gap-1">
+        <span class="fw-medium">Cod:</span>
+        <span>#0{{ this.sidebarService.pokemon.cod }}</span>
+      </div>
+      <div class="d-flex align-items-center gap-1">
+        <span class="fw-medium">Tipo:</span>
+        <span
+          class="d-block px-2 text-white rounded-1"
+          [ngClass]="item"
+          *ngFor="let item of this.sidebarService.pokemon.type"
+        >
+          {{ item }}
+        </span>
+      </div>
+    </div>
+    <div
+      class="p-2 border rounded-circle d-flex justify-content-center align-items-center sidebar__hero--container my-5"
+    >
+      <img
+        title="🥳 Pokémon {{ this.sidebarService.pokemon.name }}"
+        alt="🥳 Pokémon {{ this.sidebarService.pokemon.name }}"
+        [src]="this.sidebarService.pokemon.image"
+      />
+    </div>
+    <article class="my-4">
+      <p class="fw-bold mb-2">Informações</p>
+      <div class="d-flex align-items-center justify-content-between">
+        <span class="fw-medium">Altura:</span>
+        <span class="fw-medium"
+          >{{ this.sidebarService.pokemon.height }}cm</span
+        >
+      </div>
+      <div class="d-flex align-items-center justify-content-between">
+        <span class="fw-medium">Peso:</span>
+        <span class="fw-medium"
+          >{{ this.sidebarService.pokemon.weight }}kg</span
+        >
+      </div>
+    </article>
+    <article class="mt-4">
+      <p class="fw-bold mb-2">Descrição</p>
+      <small>{{ this.sidebarService.pokemon.description }}cm</small>
+    </article>
+  </aside>
+</section>

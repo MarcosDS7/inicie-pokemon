@@ -1,3 +1,4 @@
+import { SidebarService } from './../../../../services/sidebar/sidebar.service';
 import { Pokemon } from './../../../../models/pokemons.model';
 import { Component, Input } from '@angular/core';
 
@@ -8,4 +9,10 @@ import { Component, Input } from '@angular/core';
 })
 export class CardPokeComponent {
   @Input() pokemon: Pokemon = {} as Pokemon;
+
+  constructor(private sidebarService: SidebarService) {}
+
+  changeSidebar(): void {
+    this.sidebarService.changeSidebar(this.pokemon);
+  }
 }

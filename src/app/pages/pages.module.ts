@@ -12,6 +12,7 @@ import { CardPokeComponent } from './components/utils/card-poke/card-poke.compon
 import { SliderMainComponent } from './components/utils/sliders/slider-main/slider-main.component';
 import { SwiperModule } from 'swiper/angular';
 import { SliderComponent } from './components/utils/sliders/slider/slider.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SliderComponent } from './components/utils/sliders/slider/slider.compon
     CardPokeComponent,
     SliderMainComponent,
     SliderComponent,
+    SidebarComponent,
   ],
   imports: [
     CommonModule,

@@ -1,35 +1,60 @@
 <section class="row row-cols-1 row-cols-md-2 g-0">
   <div class="d-flex align-items-center order-1 order-md-0">
-    <div class="col-12 col-lg-9 col-xl-7">
+    <div class="col-12 col-lg-9 col-xl-7 position-relative">
       <app-title
         >Explore o mundo dos
         <span class="text-danger">Pokémons</span></app-title
       >
       <p>Descubra todas as espécies de Pokémons</p>
-      <form
-        class="input-group"
-        [formGroup]="form"
-        (ngSubmit)="onSubmit(search_pokemon)"
-      >
+      <form class="input-group position-relative">
         <input
           class="form-control bg-white border-0 fs-6"
           id="search_pokemon"
+          name="search_pokemon"
           type="text"
-          formControlName="search_pokemon"
+          #search_poke
           required
-          #search_pokemon
+          [(ngModel)]="search_pokemon"
           autocomplete="off"
           placeholder="Pesquise por nomes de pokémons..."
         />
-        <button class="btn btn-danger" type="submit" [disabled]="form.invalid">
+        <button
+          class="btn btn-danger rounded-0 rounded-end"
+          type="button"
+          [disabled]="!search_poke.value"
+          (click)="search(0)"
+        >
           Buscar
         </button>
+        <ul
+          class="list-unstyled m-0 bg-white rounded position-absolute top-100 start-0 mt-2 w-100 d-flex flex-column gap-1"
+          *ngIf="listFiltered.length > 0 && search_pokemon.length > 0"
+          style="z-index: 900"
+        >
+          <li
+            role="button"
+            *ngFor="let item of listFiltered; let i = index"
+            (click)="search(i)"
+          >
+            <button
+              class="home__search_list_button--hover d-flex border-0 px-2 py-1 w-100 bg-transparent fs-6 text-dark"
+              type="button"
+            >
+              {{ item.name }}
+            </button>
+          </li>
+        </ul>
       </form>
+      <small
+        *ngIf="search_pokemon_notfound"
+        class="d-block text-danger mt-2 start-0 position-absolute"
+        >😭 Não temos esse pokémon!</small
+      >
     </div>
   </div>
   <app-hero-pokes></app-hero-pokes>
 </section>
-<section class="py-4">
+<section class="pt-5 mb-4 py-md-4">
   <app-sub-title>Mais procurados</app-sub-title>
   <app-slider-main [receiveList]="listPokemons"></app-slider-main>
 </section>
